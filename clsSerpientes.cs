@@ -2,11 +2,11 @@
 {
     public class clsSerpientes : clsAnimal
     {
-        public bool Venenosa { get; set; }
+        public string Venenosa { get; set; }
         public decimal Longitud {  get; set; }
         public clsSerpientes()
         {
-            Venenosa = false;
+            Venenosa = string.Empty;
             Longitud = 0;
         }
 
