@@ -55,16 +55,13 @@
 
     protected async Task Guardar()
     {
-        aves.Add(ave);
-        ave = new clsAve();
-
-        await localStorage.SetItemAsync("aves", aves);
+        await localStorage.SetItemAsync("Aves", aves);
         NavigationManager.NavigateTo("/ingreso-Animales");
     }
     protected override async Task OnInitializedAsync()
     {  //La primera vez que se corre poner en comentarios, pues como no existen datos
        //convierta la lista catedraticos en null
-       aves = await localStorage.GetItemAsync<List<clsAve>>("ave");
+       aves = await localStorage.GetItemAsync<List<clsAve>>("Aves");
        ave = aves.Find(c => c.Nombre == NomAve);
     }
 }
